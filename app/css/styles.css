@@ -1,3 +1,81 @@
-body {
-  width: 50%;
-  color: blue; }
+@font-face {
+  font-family: 'bold';
+  src: url("../fonts/bold.ttf"); }
+
+li::before {
+  content: url("../images/tick.png");
+  border: 1px red solid;
+  /* to be deleted */
+  margin-right: 5px; }
+
+.card {
+  min-width: 320px;
+  border: 2px black dotted;
+  /* to be deleted */
+  padding: 5px; }
+
+.card__content {
+  border: 2px red solid;
+  /* to be deleted */
+  margin-bottom: 10px; }
+
+.content__title {
+  text-align: center;
+  font-family: 'bold';
+  color: #00232F;
+  font-size: 30px; }
+
+.content__list {
+  list-style-type: none; }
+
+.list__item {
+  max-width: 1000px;
+  line-height: 1.4;
+  font-size: 15px;
+  font-family: Arial; }
+
+.card__image {
+  border: 2px blue solid;
+  /* to be deleted */
+  margin: 0 auto;
+  margin-bottom: 10px; }
+
+.image {
+  text-align: center; }
+
+.card__bubble {
+  border: 2px green solid;
+  width: 220px;
+  margin: 0 auto; }
+
+.bubble {
+  background-color: red;
+  /* to be deleted */ }
+
+.bubble__triangle {
+  border-top: 35px solid lightblue;
+  border-left: 45px solid transparent;
+  float: left;
+  margin-top: 45px; }
+
+.bubble__square {
+  background: lightblue;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 200px;
+  height: 100px; }
+
+.bubble__text {
+  font-family: 'bold';
+  padding: 35px 0 0 35px;
+  font-size: 30px;
+  color: #00232F; }
+
+@media (max-width: 320px) {
+  .card__content {
+    float: left; }
+  .card__image {
+    float: left; }
+  .card__bubble {
+    float: left; } }

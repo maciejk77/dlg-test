@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'bold';
+  /*a name to be used later*/
+  src: url("../fonts/bold.ttf");
+  /*URL to font*/ }
+
+li::before {
+  content: url("../images/tick.png");
+  border: 1px red solid;
+  /* to be deleted */
+  margin-right: 5px;
+  transform: scale(0.1); }
+
+.card {
+  border: 2px dotted orange;
+  /* to be deleted */
+  min-width: 320px; }
+
+.card__content {
+  border: 1px solid red;
+  /* to be deleted */
+  font-family: Arial, Helvetica, sans-serif;
+  height: 200px;
+  /* to be deleted */
+  width: 200px;
+  /* to be deleted */
+  background-color: red;
+  /* to be deleted */ }
+
+.content__title {
+  font-family: 'bold';
+  text-align: center; }
+
+.content__list {
+  list-style-type: none; }
+
+.list__item {
+  font-size: 14px;
+  padding: 2px;
+  border: 1px green solid;
+  /* to be deleted */ }
+
+.card__image {
+  border: 1px solid blue;
+  /* to be deleted */
+  height: 200px;
+  /* to be deleted */
+  width: 200px;
+  /* to be deleted */
+  background-color: blue;
+  /* to be deleted */ }
+
+.image {
+  margin: 0 auto;
+  width: 320px; }
+
+.card__bubble {
+  border: 1px solid green;
+  /* to be deleted */
+  /*padding: 0 60px;*/
+  height: 200px;
+  /* to be deleted */
+  width: 200px;
+  /* to be deleted */
+  background-color: yellow;
+  /* to be deleted */ }
+
+.bubble {
+  border: 1px solid green;
+  /* to be deleted */
+  /*  width: 200px;
+  margin: 0 auto;*/ }
+
+.bubble__triangle {
+  border-top: 35px solid lightblue;
+  border-left: 45px solid transparent;
+  float: left;
+  margin-top: 45px; }
+
+.bubble__square {
+  background: lightblue;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-top: 20px; }
+
+.bubble__text {
+  font-family: 'bold';
+  padding: 0px 0px 5px 5px;
+  font-size: 30px; }
+
+@media (min-width: 635px) {
+  .card {
+    display: inline-block; }
+  /*.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    overflow: auto;
+  }*/
+  .card__content {
+    float: left; }
+  .card__image {
+    float: left; }
+  .card__bubble {
+    float: left; } }

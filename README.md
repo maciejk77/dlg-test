@@ -1,0 +1,3 @@
+- Clone project ``git clone ...``
+- Install dependancies ``npm install``
+- Run in command line ``gulp``
