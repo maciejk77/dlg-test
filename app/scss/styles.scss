@@ -1,28 +1,32 @@
+@import "./vars.scss";
+
 @font-face {
   font-family: 'bold';
   src: url("../fonts/bold.ttf"); 
 }
 
-.card {
-  /*border: 2px black dotted;*/
-  background-color: #F5F5F5;
-  min-width: 320px;
-  overflow: hidden;
-  padding: 5px; 
-  max-width: 1000px;
-  min-width: 320px;
+body {
+  background-color: $grey;
 }
 
-.card__content {
-  /*border: 2px red solid;*/
-  max-width: 320px;
-  margin: 0 auto 10px; 
+.card {
+  background-color: $grey;
+  margin: 0 auto;
+  min-width: $mobile;
+  overflow: hidden;
+
+  &__content,
+  &__image,
+  &__bubble {
+    margin: 0 auto; 
+    max-width: $mobile;
+  }
 }
 
 .content__title {
-  color: #064868;
+  color: $dark-blue;
   font-family: 'bold';
-  font-size: 35px; 
+  font-size: $title-text; 
   line-height: 1.3;
   margin: 25px auto 0px;
   text-align: center;
@@ -35,83 +39,88 @@
 
 .list__item {
   background: url(../images/tick.png) top left no-repeat;
-  /*border: 1px solid green;*/
-  color: #3F7499;
-  font-size: 15px;
-  font-family: Arial;
+  color: $list-blue;
+  font-family: $font-text;
+  font-size: $list-text;
   height: 40px;
   line-height: 1.2;
-  margin: 0 auto;
-  margin-right: 10px;
-  max-width: 320px;
-  padding-left: 45px;
-  padding-top: 10px;
-}
-
-.card__image {
-  /*border: 2px blue solid;*/
-  margin: 0 auto 10px;
-  max-width: 320px; 
+  margin: 0 10px 0 auto;
+  max-width: $mobile;
+  padding: 10px 0 0 45px;
 }
 
 .image {
-  /*background-color: white;*/
-  /*background-blend-mode: screen;*/
   background: url(../images/churchill-dog.png) top left no-repeat;
-  text-align: center;
-  width: 320px;
   height: 430px;
-}
-
-.card__bubble {
-  /*border: 2px green solid;*/
-  margin: 0 auto; 
-  width: 220px;
+  text-align: center;
+  width: $mobile;
 }
 
 .bubble {
-  margin: -40px;
-}
-
-.bubble__triangle {
-  border-left: 45px solid transparent;
-  border-top: 35px solid #BDE5FF;
-  float: left;
-  margin-top: 45px; 
-}
-
-.bubble__square {
-  background: #BDE5FF;
-  border-radius: 15px;
-  height: 100px; 
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 275px;
-}
-
-.bubble__text {
-  color: #074A6C; 
-  font-family: 'bold';
-  font-size: 50px;
-  padding: 25px 0 0 35px;
-}
-
-@media (min-width: 960px) {
-  .card__content {
-    float: left; 
+  &__triangle {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-bottom: 40px solid $light-blue;
+    margin: 0 auto;
   }
-  
-  .card__image {
-    float: left; 
+
+  &__square {
+    background: $light-blue;
+    border-radius: 15px;
+    height: 100px; 
+    margin: -55px auto 20px;
+    width: 275px;
   }
+
+  &__text {
+    color: #074A6C; 
+    font-family: 'bold';
+    font-size: $bubble-text;
+    padding: 25px 0 0 35px;
+  }  
+}
+
+@media (min-width: $tablet) {
+  .card {
+    width: $tablet;
   
-  .card__bubble {
-    float: left;
-    margin-top: 120px; 
-    padding-left: 10px;
-  } 
+    &__content,
+    &__image {
+      float: left; 
+    }
+        
+    &__bubble {
+      margin-top: 550px; 
+      padding-left: 125px;
+    } 
+  }
 
   .bubble {
-    margin-left: -10px;
+    margin: -120px 0 20px 80px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .card {
+    width: $desktop;
+  
+    &__content,
+    &__image,
+    &__bubble {
+      float: left; 
+    }
+    
+    &__bubble {
+      margin: -175px 0 0 475px; 
+    } 
+  }
+
+  .bubble__triangle {
+    height: 0;
+    float: left;
+    margin: 20px 0 0 -30px;
+    transform: rotate(-90deg);
+    width: 0;
   }
 }
