@@ -1,12 +1,11 @@
 // Font Faces
-$font-text: "Arial";
+$font-text: Arial, Helvetica, sans-serif;
+$font-titles: 'bold', sans-serif;
 
 // Font Sizes
 $bubble-text: 50px;
 $title-text: 35px;
 $list-text: 14px;
-
-
 
 // Colours
 $grey: #F5F5F5;
@@ -18,3 +17,4 @@ $list-blue: #3F7499;
 $mobile: 320px;
 $tablet: 768px;
 $desktop: 1024px;
+

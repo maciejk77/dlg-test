@@ -6,121 +6,142 @@
 }
 
 body {
+  font-family: $font-text;
   background-color: $grey;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  min-width: $mobile;
+  max-width: $desktop;
 }
 
 .card {
   background-color: $grey;
-  margin: 0 auto;
-  min-width: $mobile;
-  overflow: hidden;
 
-  &__content,
-  &__image,
-  &__bubble {
-    margin: 0 auto; 
-    max-width: $mobile;
+  &__content {
+    margin: 25px auto 0;
   }
+  &__image {
+    text-align: center;
+  }
+  &__bubble {
+    margin: 65px auto 0;
+  }
+}
+
+.content {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.content__title,
+.content__list {
+  margin: 25px auto;
 }
 
 .content__title {
   color: $dark-blue;
-  font-family: 'bold';
+  font-family: $font-titles;
   font-size: $title-text; 
   line-height: 1.3;
-  margin: 25px auto 0px;
-  text-align: center;
-  width: 250px;
+  text-align: center; 
 }
 
 .content__list {
-  list-style-type: none; 
+  list-style-type: none;
+  padding: 0;
+  padding-left: 45px;
 }
 
-.list__item {
+.content__item {
   background: url(../images/tick.png) top left no-repeat;
   color: $list-blue;
-  font-family: $font-text;
   font-size: $list-text;
-  height: 40px;
-  line-height: 1.2;
-  margin: 0 10px 0 auto;
-  max-width: $mobile;
-  padding: 10px 0 0 45px;
-}
+  min-height: 40px;
+  padding-left: 45px;
+  margin-bottom: 10px;
+  max-width: 75%;
 
-.image {
-  background: url(../images/churchill-dog.png) top left no-repeat;
-  height: 430px;
-  text-align: center;
-  width: $mobile;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .bubble {
-  &__triangle {
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-bottom: 40px solid $light-blue;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
+  width: 280px;
 
   &__square {
     background: $light-blue;
     border-radius: 15px;
-    height: 100px; 
-    margin: -55px auto 20px;
-    width: 275px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: calc(50% - 20px);
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 40px solid $light-blue;
+    }
   }
 
   &__text {
-    color: #074A6C; 
-    font-family: 'bold';
+    color: $dark-blue; 
+    font-family: $font-titles;
     font-size: $bubble-text;
-    padding: 25px 0 0 35px;
+    padding: 25px 0 0;
+    text-align: center;
   }  
 }
 
 @media (min-width: $tablet) {
   .card {
-    width: $tablet;
   
     &__content,
-    &__image {
-      float: left; 
-    }
-        
+    &__image,
     &__bubble {
-      margin-top: 550px; 
-      padding-left: 125px;
-    } 
-  }
+      float: left;
+      width: 50%;
+    }
 
-  .bubble {
-    margin: -120px 0 20px 80px;
+    &__image,
+    &__bubble {
+      float: right;
+    }
+
+    &__bubble {
+      clear: both;
+      margin-top: 0;
+    }
   }
 }
 
 @media (min-width: $desktop) {
   .card {
-    width: $desktop;
   
     &__content,
     &__image,
     &__bubble {
-      float: left; 
+      float: left;
+      width: 33.333%;
     }
     
     &__bubble {
-      margin: -175px 0 0 475px; 
+      clear: none;
+      margin-top: 120px;
     } 
   }
 
-  .bubble__triangle {
-    height: 0;
-    float: left;
-    margin: 20px 0 0 -30px;
-    transform: rotate(-90deg);
-    width: 0;
+  .bubble__square:before {
+    top: calc(50% - 20px);
+    left: -40px;
+    border-left: 40px solid transparent;
+    transform: rotate(180deg);
   }
 }
