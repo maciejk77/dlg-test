@@ -5,3 +5,9 @@
 - Change to folder ``cd dlg-test``
 - Install dependancies ``npm install``
 - Run in command line ``gulp`` which will open page in the browser (compile Sass to CSS)
+
+## Desktop view
+ 
+## Tablet view
+
+##  Mobile view
