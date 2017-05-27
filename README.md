@@ -7,6 +7,7 @@ The purpose of this exercise is to create **RWD** responsive web module using **
 - HTML, BEM CSS
 - Sass
 - Gulp
+- NPM packages (gulp-sass for compiling Sass to CSS, browserSync for spinning up server after build)
 - RWD responsive design (media queries)
 
 ## Download (run in command line)
